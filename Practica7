@@ -1,0 +1,52 @@
+// Definición de una clase base (superclase)
+class Animal {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func makeSound() {
+        print("Haciendo un sonido genérico")
+    }
+}
+
+// Definición de una subclase que hereda de Animal
+class Dog: Animal {
+    // Puedes agregar nuevas propiedades y métodos específicos de la subclase aquí
+    
+    // Override del método makeSound para la subclase
+    override func makeSound() {
+        print("Guau guau")
+    }
+    
+    func wagTail() {
+        print("Meneando la cola")
+    }
+}
+
+// Definición de otra subclase que hereda de Animal
+class Cat: Animal {
+    // Puedes agregar nuevas propiedades y métodos específicos de la subclase aquí
+    
+    // Override del método makeSound para la subclase
+    override func makeSound() {
+        print("Miau miau")
+    }
+    
+    func purr() {
+        print("Ronroneando")
+    }
+}
+
+// Uso de las clases
+let myDog = Dog(name: "Fido")
+let myCat = Cat(name: "Whiskers")
+
+print("Dog:")
+myDog.makeSound()
+myDog.wagTail()
+
+print("\nCat:")
+myCat.makeSound()
+myCat.purr()
