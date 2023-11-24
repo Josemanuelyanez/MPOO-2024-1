@@ -13,7 +13,6 @@ class Animal {
 
 // Definición de una subclase que hereda de Animal
 class Dog: Animal {
-    // Puedes agregar nuevas propiedades y métodos específicos de la subclase aquí
     
     // Override del método makeSound para la subclase
     override func makeSound() {
@@ -27,7 +26,6 @@ class Dog: Animal {
 
 // Definición de otra subclase que hereda de Animal
 class Cat: Animal {
-    // Puedes agregar nuevas propiedades y métodos específicos de la subclase aquí
     
     // Override del método makeSound para la subclase
     override func makeSound() {
