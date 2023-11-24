@@ -1,0 +1,40 @@
+class Animal {
+    // Datos miembro encapsulados
+    private var name: String
+    private var age: Int
+
+    // Constructor
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+
+    // Método miembro público para obtener el nombre
+    public func getName() -> String {
+        return name
+    }
+
+    // Método miembro público para establecer la edad
+    public func setAge(newAge: Int) {
+        if newAge >= 0 {
+            age = newAge
+        }
+    }
+
+    // Método miembro interno para imprimir información
+    internal func printDetails() {
+        print("Nombre: \(name), Edad: \(age) años")
+    }
+}
+
+// Uso de la clase
+let myAnimal = Animal(name: "Tigre", age: 3)
+
+// Intentar acceder a propiedades privadas desde fuera de la clase resultará en un error de compilación
+// myAnimal.name // Esto generará un error
+
+// Sin embargo, podemos acceder a métodos públicos e internos
+print(myAnimal.getName()) // Salida: Tigre
+
+myAnimal.setAge(newAge: 4)
+myAnimal.printDetails() // Salida: Nombre: Tigre, Edad: 4 años

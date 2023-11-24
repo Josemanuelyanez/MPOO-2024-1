@@ -1,0 +1,49 @@
+// Definición de la clase base
+class Animal {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func makeSound() {
+        print("Haciendo un sonido genérico")
+    }
+}
+
+// Definición de clases derivadas
+class Dog: Animal {
+    override func makeSound() {
+        print("Guau guau")
+    }
+}
+
+class Cat: Animal {
+    override func makeSound() {
+        print("Miau miau")
+    }
+}
+
+class Bird: Animal {
+    override func makeSound() {
+        print("Pío pío")
+    }
+}
+
+// Crear una referencia de la clase base
+var animalReference: Animal
+
+// Crear instancias de diferentes clases derivadas
+let myDog = Dog(name: "Buddy")
+let myCat = Cat(name: "Whiskers")
+let myBird = Bird(name: "Tweetie")
+
+// Asignar instancias a la referencia de la clase base
+animalReference = myDog
+animalReference.makeSound() // Salida: Guau guau
+
+animalReference = myCat
+animalReference.makeSound() // Salida: Miau miau
+
+animalReference = myBird
+animalReference.makeSound() // Salida: Pío pío
